@@ -1,45 +1,44 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Name TBC
 
-Welcome USER_NAME,
+#### A link to the site can be found [here.]()
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+#### Interactive Front End Development - Code Institute
 
-## Gitpod Reminders
+#### Name TBC is a fun and interactive website aimed at young children between the ages of 3 and 8 to take their first steps into learning Spanish. The site will be straight forward to navigate but be bright and engaging for the children to play. It will use pictures not only to help the users with the questions but also ensure the learning is an enjoyable experience.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+![Site Mock Up](png)
 
-`python3 -m http.server`
+### User Experience
 
-A blue button should appear to click: *Make Public*,
+The aim of the website it to make it fun for the child so they want to return and play again but also to ensure that they are able to learn their first words in Spanish and are able to retain the information. The site will be have 3 main pages but these will be simple in design and will not contain too much detail to ensure the child is not overburdened with information. The use of bright colours and pictures will help achieve the playful aspect of the website.
 
-Another blue button should appear to click: *Open Browser*.
+User Stories to help achieve this user experience:
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Player:
 
-A blue button should appear to click: *Make Public*,
+1. As a player of the game, I want to be able to navigate around the website easily.
+2. As a player of the game, I want to find out how to play the game.
+3. As a player of the game, I want to be able to understand the question clearly.
+4. As a player of the game, I want to know my score.
+5. As a player of the game, I want to know if I got the answer correct or not.
+6. As a player of the game, I want to see how I scored against others.
 
-Another blue button should appear to click: *Open Browser*.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+Site Creator:
 
-## Updates Since The Instructional Video
+1. As the creator of the game, I want players to find the website easy and fun to use.
+2. As the creator of the game, I want good visuals and colours for the users to enjoy.
+3. As the creator of the game, I want users to be able to contact me and provide their feedback.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+Parents:
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+1. As a parent of a child playing the game, I want the site to be simple but intuitive to use.
+2. As a parent of a child playing the game, I want the site to be engaging so my child wants to continue to play and learn.
+3. As a parent of a child playing the game, I want the site to be playable on different devices so my child can play the game in different environments.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+#### Wireframes
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
---------
-
-Happy coding!
+#### Features
