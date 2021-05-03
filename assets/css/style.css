@@ -5,3 +5,14 @@ body {
     margin: 0;
     padding: 0;
 }
+
+
+/*------Headers------*/
+
+.heading {
+    background-color: yellow;
+    text-align: center;
+    color: red;
+    font-style: bold;
+    font-size: 5rem;
+}
