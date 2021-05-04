@@ -40,6 +40,13 @@ body {
     padding-top: 15px;
 }
 
+.btn-red {
+    background-color: red;
+    border-color: red;
+    font-weight: bold;
+    color: white;
+}
+
 .buttons {
     margin: 50px 0 50px 0;
 }
@@ -52,3 +59,4 @@ body {
     text-align: center;
     font-weight: bold;
 }
+
