@@ -64,6 +64,31 @@ footer h5 {
     font-size: 1.5rem;
 }
 
+.email {
+    color: red;
+    font-size: 1.5rem;
+}
+
+.email:hover,
+
+.email:active,
+
+.email:focus,
+
+.email:active:focus {
+    color: blue;
+    text-decoration: none;
+}
+
+.navbar .contact:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.submit {
+    background-color: yellow;
+    color: red;
+}
 
 .contact {
     padding-left: 50px;
@@ -76,6 +101,7 @@ footer h5 {
 .socials {
     color: red;
     font-size: 1.5rem;
+    padding: 5px;
 }
 
 .socials:hover,
