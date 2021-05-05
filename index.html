@@ -60,20 +60,27 @@
 
 
 
-    <footer>
-        <div>Contact Us</div>
-        <div>
-            <ul>
-                <li class="socials"><a href="https://www.twitter.com" target="_blank" class="sociallink"><i
-                                class="fab fa-twitter-square"></i>  @LearntheLingo</a></li>
-                <li class="socials"><a href="https://www.instagram.com" target="_blank"
-                            class="sociallink"><i class="fab fa-instagram"></i>  LearntheLingo</a></li>
-            </ul>
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4 contact">
+                <h5>Contact Us <i class="fas fa-envelope"></i></h5>
+            </div>
+            <div class="col-sm-4 copyright">
+                <h5>LearnTheLingo</h5>
+            </div>
+            <div class="col-sm-4 socialnetwork">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="https://www.twitter.com" target="_blank" class="socials"><i
+                                class="fab fa-twitter-square"></i> @LearnTheLingo</a></li>
+                    <li class="list-inline-item"><a href="https://www.instagram.com" target="_blank" class="socials"><i
+                                class="fab fa-instagram"></i> LearnTheLingo</a></li>
+                </ul>
+            </div>
         </div>
     </footer>
 
     <!------Instructions Modal------>
-    <div class="modal fade" id="instructionsinfo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="instructionsinfo" tabindex="-1" aria-labelledby="instructionspopup" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered .modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
@@ -104,7 +111,7 @@
                     <p>Now Vamos!</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary btn--yellow" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -113,7 +120,7 @@
 
     <!------Age and name Modal------>
     <div class="modal fade" id="ageandname" data-backdrop="static" data-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        aria-labelledby="addnameage" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -135,8 +142,8 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary btn--yellow">Submit</button>
+                    <button type="button" class="btn btn-secondary btn--blue" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>

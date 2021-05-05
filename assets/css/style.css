@@ -60,3 +60,45 @@ body {
     font-weight: bold;
 }
 
+footer h5 {
+    font-size: 1.5rem;
+}
+
+
+.contact {
+    padding-left: 50px;
+}
+
+.copyright {
+    text-align: center;
+}
+
+.socials {
+    color: red;
+    font-size: 1.5rem;
+}
+
+.socials:hover,
+
+.socials:active,
+
+.socials:focus,
+
+.socials:active:focus {
+    color: blue;
+    text-decoration: none;
+}
+
+.modal-content {
+    background-color: red;
+    color: yellow;
+}
+
+.btn--yellow {
+    background-color: yellow;
+    color: red;
+}
+
+.btn--blue {
+    background-color: blue;
+}
