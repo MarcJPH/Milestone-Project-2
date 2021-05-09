@@ -128,3 +128,7 @@ footer h5 {
 .btn--blue {
     background-color: blue;
 }
+
+.home {
+    display: inline-block;
+}
