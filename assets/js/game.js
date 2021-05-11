@@ -1,3 +1,7 @@
+console.log("Working?")
+
+
+
 //An array of questions that will be loaded onto the game_page.html
 
 const questions = [
@@ -14,18 +18,42 @@ const questions = [
         image: 'tbc.jpg',
         options: []
     },
-]
+];
+
+
+function runGame() {
+
+}
+
+let myButton = document.getElementById('play-game');
+myButton.addEventListener('click', generateQuestions);
 
 
 //Generate questions to the HTML page//
-function generateQuestion() {
+function generateQuestions () {
     for (let i = 0; i < questions.length; i++) {
 
-
-        //Sets up the html layout for the Questions in the game using the objects within the questions array  
-        document.getElementById("question").innerHTML = questions[i];
+    let q = questions[currentQuestion];
+    
+        document.getElementById('question').innerHTML = `<h3> ${q.question} </h3>`;
     }
 }
+
+function checkAnswer() {
+
+}
+
+
+function addScore() {
+
+}
+
+
+function getPlayerScore() {
+
+}
+
+
 
 //`<h3> ${q.question} </h3>`
 //let q = questions[0];
