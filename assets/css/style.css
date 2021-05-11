@@ -132,3 +132,45 @@ footer h5 {
 .home {
     display: inline-block;
 }
+
+
+#question-number{
+    text-align: center;
+    padding-top: 50px;
+}
+
+#current-score {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.score {
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+#question {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.buttonspace {
+    margin: 50px 75px 50px 75px;
+}
+
+.footer-details {
+    padding: 20px 0 15px 0;
+}
+
+
+.select:hover,
+
+.select:active,
+
+.select:focus,
+
+.select:active:focus {
+    color: blue;
+    text-decoration: none;
+}
