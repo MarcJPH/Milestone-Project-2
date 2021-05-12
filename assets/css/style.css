@@ -139,6 +139,10 @@ footer h5 {
     padding-top: 50px;
 }
 
+#image {
+    text-align: center;
+}
+
 #current-score {
     text-align: center;
     padding-top: 50px;

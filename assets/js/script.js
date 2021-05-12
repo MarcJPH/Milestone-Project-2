@@ -189,19 +189,18 @@ function generateQuestions() {
         document.getElementById('question').innerHTML = `<h3> ${q.question} </h3>`;
 
 
-        var img = document.createElement("img");
-        img.src = "assets/images/hello.jpg";
-        var src = document.getElementById("image");
-        src.appendChild(img);
-
-
-
         document.getElementById('option1').innerHTML = `<h2> ${q.options[0].option1}</h2>`;
         document.getElementById('option2').innerHTML = `<h2> ${q.options[1].option2}</h2>`;
         document.getElementById('option3').innerHTML = `<h2> ${q.options[2].option3}</h2>`;
 
     }
+    
 }
+
+var img = document.createElement("img");
+        img.src = "assets/images/hello.jpg";
+        var src = document.getElementById("image");
+        src.appendChild(img);
 
 
 
