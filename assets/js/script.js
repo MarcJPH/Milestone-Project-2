@@ -34,175 +34,153 @@ function playerAge() {
 
 const questions = [
     {
-        game_1: 'Question 1',
-        question: 'How do you say hello in Spanish?',
-        image: 'assets/images/hello.jpg',
-        options: [{
-            option1: 'Adios',
-        },
-        {
-            option2: 'Hola',
-        },
-        {
-            option3: 'Bueno'
-        }
-        ],
-        answer: "option2"
+        game_1: "Question 1",
+        question: "1. How do you say hello in Spanish?",
+        image: "assets/images/hello.jpg",
+        choices: ["Adios", "Hola", "Bueno"],
+        answer: "Hola"
+    },
+    {
+        game_2: "Question 2",
+        question: "2. What does bicicleta mean in English?",
+        image: "assets/images/bicycle.jpg",
+        choices: ["Bicycle", "Bucket", "Balloon"],
+        answer: "Bicycle"
+    },
+    {
+        game_3: "Question 3",
+        question: "3. How do you say guitar in Spanish?",
+        image: "assets/images/guitar.jpg",
+        choices: ["Getafe", "Gorila", "Guitarra"],
+        answer: "Guitarra"
+    },
+    {
+        game_3: "Question 4",
+        question: "4. What does perro mean in English?",
+        image: "assets/images/dog.jpg",
+        choices: ["Dog", "Cat", "Parrot"],
+        answer: "Dog"
     },
 
     {
-        game_2: 'Question 2',
-        question: 'What does bicicleta mean in English?',
-        image: 'assets/images/bicycle.jpg',
-        options: {
-            option1: 'Bicycle',
-
-            option2: 'Bucket',
-
-            option3: 'Balloon'
-        },
-        answer: "option1"
+        game_3: "Question 5",
+        question: "5. What does playa mean in English?",
+        image: "assets/images/beach.jpg",
+        choices: ["Plant", "Party", "Beach"],
+        answer: "Beach"
     },
-
     {
-        game_3: 'Question 3',
-        question: 'How do you say guitar in Spanish?',
-        image: 'assets/images/guitar.jpg',
-        options: {
-            option1: 'Getafe',
-
-            option2: 'Gorila',
-
-            option3: 'Guitarra'
-        },
-        answer: "option3"
-    },
-
-   {
-        game_3: 'Question 4',
-        question: 'What does perro mean in English?',
-        image: 'assets/images/dog.jpg',
-        options: {
-            option1: 'Dog',
-
-            option2: 'Cat',
-
-            option3: 'Parrot'
-        },
-        answer: "option1"
-    },
-    
-    {
-        game_3: 'Question 5',
-        question: 'What does playa mean in English?',
-        image: 'assets/images/beach.jpg',
-        options: {
-            option1: 'Plant',
-
-            option2: 'Party',
-
-            option3: 'Beach'
-        },
-        answer: "option3"
-    },
-
-    {
-        game_3: 'Question 6',
-        question: 'What is the colour red in Spanish?',
+        game_3: "Question 6",
+        question: "6. What is the colour red in Spanish?",
         image: 'tbc.jpg',
-        options: {
-            option1: 'Blanco',
-
-            option2: 'Rojo',
-
-            option3: 'Lluvia'
-        },
-        answer: "option2"
+        choices: ["Blanco", "Rojo", "Lluvia"],
+        answer: "Rojo"
     },
-
     {
-        game_3: 'Question 7',
-        question: 'What is sun in Spanish?',
+        game_3: "Question 7",
+        question: "7. What is sun in Spanish?",
         image: 'tbc.jpg',
-        options: {
-            option1: 'Sol',
-
-            option2: 'Sello',
-
-            option3: 'Bote'
-        },
-        answer: "option1"
+        choices: ["Sol", "Sello", "'Bote"],
+        answer: "Sol"
     },
-
     {
-        game_3: 'Question 8',
-        question: 'What does flor mean in English?',
+        game_3: "Question 8",
+        question: "8. What does flor mean in English?",
         image: 'tbc.jpg',
-        options: {
-            option1: 'Flower',
-
-            option2: 'Car',
-
-            option3: 'Foot'
-        },
-        answer: "option1"
+        choices: ["Flower", "Car", "Foot"],
+        answer: "Flower"
     },
-
     {
-        game_3: 'Question 9',
-        question: 'What is hat in Spanish?',
+        game_3: "Question 9",
+        question: "9. What is hat in Spanish?",
         image: 'tbc.jpg',
-        options: {
-            option1: 'Sandalias',
-
-            option2: 'Calcetines',
-
-            option3: 'Sombrero'
-        },
-        answer: "option3"
+        choices: ["Sandalias", "Calcetines", "Sombrero"],
+        answer: "Sombrero"
     },
-
     {
-        game_3: 'Question 10',
-        question: 'What does amigo mean in English?',
+        game_3: "Question 10",
+        question: "10. What does amigo mean in English?",
         image: 'tbc.jpg',
-        options: {
-            option1: 'Auntie',
-
-            option2: 'Friend',
-
-            option3: 'Apple'
-        },
-        answer: "option2"
+        choices: [ "Auntie", "Friend", "Apple"],
+        answer: "Friend"
     }
 ];
 let currentQuestion = 0;
 
+const BUTTONS_CONTAINER = document.getElementById("buttons");
 
-//Generate questions to the HTML page//
-function generateQuestions() {
-    for (let i = 0; i < questions.length; i++) {
+// Loop through all the questions above and create a div with the question and
+// multiple choice buttons.
+for (let question of questions) {
+  let questionDiv = document.createElement("div");
+  questionDiv.classList.add("question-container");
 
-        let q = questions[currentQuestion];
+  // Add the question text.
+  let questionText = document.createElement("p");
+  questionText.classList.add('question-text')
+  questionText.innerHTML = question.question;
+  questionDiv.appendChild(questionText);
 
-        document.getElementById('question-number').innerHTML = `<h2> ${q.game_1}</h2>`;
-        document.getElementById('question').innerHTML = `<h3> ${q.question} </h3>`;
-
-
-        document.getElementById('option1').innerHTML = `<h2> ${q.options[0].option1}</h2>`;
-        document.getElementById('option2').innerHTML = `<h2> ${q.options[1].option2}</h2>`;
-        document.getElementById('option3').innerHTML = `<h2> ${q.options[2].option3}</h2>`;
-
-    }
+  // Show the choices. Each choice is a button that has the choice as its text
+  // but also a data property with the actual answer, to be used in grading below.
+  // The grading function is triggered when the button is clicked.
+  for (let choice of question.choices) {
+    // Generate a button for the current spanish word choice.
+    let button = generateAnswerButton(choice, question.answer);
     
+    questionDiv.appendChild(button);
+  }
+
+  BUTTONS_CONTAINER.appendChild(questionDiv);
 }
 
-var img = document.createElement("img");
-        img.src = "assets/images/hello.jpg";
-        var src = document.getElementById("image");
-        src.appendChild(img);
+/* Given a word in Spanish, generate button that displays that word.
 
+The button also has a data attribute with the same word.
 
+@param {string} spanishWord - The Spanish word to display on the button.
+
+@returns {HTMLElement} - The button object described above.
+*/
+function generateAnswerButton(spanishWordOnButton, answer) {
+  let button = document.createElement("button");
+
+  // <button data-word="Hola" data-correct-answer="Adios">Hola</button>
+  button.innerHTML = spanishWordOnButton;
+
+  // Make a data attribute with the Spanish word
+  // https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes
+  button.dataset.word = spanishWordOnButton;
+  
+  // Add an attribute with the correct answer for this question, to make grading easy.
+  button.dataset.correctAnswer = answer;
+
+  // Make the button trigger the grading function below when clicked.
+  button.addEventListener("click", gradeQuestion);
+
+  return button;
+}
+
+/* Event listener for answer buttons. Decide whether the answer chosen is correct or not.
+
+@param {Event} - The fired event. This is standard for all event listeners.
+                 https://developer.mozilla.org/en-US/docs/Web/API/EventListener
+
+*/
+function gradeQuestion(evt) {
+  // The object that triggered the event i.e. the button
+  let clickedButton = evt.target;
+
+  // The word on the button, which is encoded in data-word (see generateAnswerButton above)
+  let buttonWord = clickedButton.dataset.word;
+  let correctAnswer = clickedButton.dataset.correctAnswer;
+
+  if (buttonWord === correctAnswer) {
+    alert("Correct!");
+  } else {
+    alert("Please try again.");
+  }
+}
 
 
 function checkAnswer() {
@@ -219,6 +197,5 @@ function addScore() {
 function getPlayerScore() {
 
 }
-
 
 
