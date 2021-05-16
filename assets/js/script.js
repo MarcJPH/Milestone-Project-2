@@ -30,6 +30,7 @@ function playerAge() {
 
 
 
+
 //An array of questions that will be loaded onto the game_page.html
 
 const questions = [
@@ -80,7 +81,7 @@ const questions = [
         game_3: "Question 7",
         question: "7. What is sun in Spanish?",
         image: 'tbc.jpg',
-        choices: ["Sol", "Sello", "'Bote"],
+        choices: ["Sol", "Sello", "Bote"],
         answer: "Sol"
     },
     {
@@ -101,37 +102,49 @@ const questions = [
         game_3: "Question 10",
         question: "10. What does amigo mean in English?",
         image: 'tbc.jpg',
-        choices: [ "Auntie", "Friend", "Apple"],
+        choices: ["Auntie", "Friend", "Apple"],
         answer: "Friend"
     }
 ];
-let currentQuestion = 0;
+
+let score = 0;
 
 const BUTTONS_CONTAINER = document.getElementById("buttons");
 
 // Loop through all the questions above and create a div with the question and
 // multiple choice buttons.
 for (let question of questions) {
-  let questionDiv = document.createElement("div");
-  questionDiv.classList.add("question-container");
+    let questionDiv = document.createElement("div");
+    questionDiv.classList.add("question-container");
+    questionDiv.dataset.image = question.image;
 
-  // Add the question text.
-  let questionText = document.createElement("p");
-  questionText.classList.add('question-text')
-  questionText.innerHTML = question.question;
-  questionDiv.appendChild(questionText);
+    // Add the question text.
+    let questionText = document.createElement("p");
+    questionText.classList.add('question-text')
+    questionText.innerHTML = question.question;
+    questionDiv.appendChild(questionText);
 
-  // Show the choices. Each choice is a button that has the choice as its text
-  // but also a data property with the actual answer, to be used in grading below.
-  // The grading function is triggered when the button is clicked.
-  for (let choice of question.choices) {
-    // Generate a button for the current spanish word choice.
-    let button = generateAnswerButton(choice, question.answer);
-    
-    questionDiv.appendChild(button);
-  }
+    //Add the image for the questions.
+    //let images = document.getElementsByClassName("question-container");
+    //images.addEventListener('mouseover', imageIn);
+    //document.getElementsById("question-text").addEventListener('mouseout', imageOut);
 
-  BUTTONS_CONTAINER.appendChild(questionDiv);
+
+    //function imageIn(evt) {
+      
+    //}
+
+    // Show the choices. Each choice is a button that has the choice as its text
+    // but also a data property with the actual answer, to be used in grading below.
+    // The grading function is triggered when the button is clicked.
+    for (let choice of question.choices) {
+        // Generate a button for the current spanish word choice.
+        let button = generateAnswerButton(choice, question.answer);
+
+        questionDiv.appendChild(button);
+    }
+
+    BUTTONS_CONTAINER.appendChild(questionDiv);
 }
 
 /* Given a word in Spanish, generate button that displays that word.
@@ -143,59 +156,51 @@ The button also has a data attribute with the same word.
 @returns {HTMLElement} - The button object described above.
 */
 function generateAnswerButton(spanishWordOnButton, answer) {
-  let button = document.createElement("button");
+    let button = document.createElement("button");
 
-  // <button data-word="Hola" data-correct-answer="Adios">Hola</button>
-  button.innerHTML = spanishWordOnButton;
+    // <button data-word="Hola" data-correct-answer="Adios">Hola</button>
+    button.innerHTML = spanishWordOnButton;
 
-  // Make a data attribute with the Spanish word
-  // https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes
-  button.dataset.word = spanishWordOnButton;
-  
-  // Add an attribute with the correct answer for this question, to make grading easy.
-  button.dataset.correctAnswer = answer;
+    // Make a data attribute with the Spanish word
 
-  // Make the button trigger the grading function below when clicked.
-  button.addEventListener("click", gradeQuestion);
+    button.dataset.word = spanishWordOnButton;
 
-  return button;
+    // Add an attribute with the correct answer for this question, to make grading easy.
+    button.dataset.correctAnswer = answer;
+
+    // Make the button trigger the grading function below when clicked.
+    button.addEventListener("click", gradeQuestion);
+
+    return button;
 }
 
 /* Event listener for answer buttons. Decide whether the answer chosen is correct or not.
 
 @param {Event} - The fired event. This is standard for all event listeners.
-                 https://developer.mozilla.org/en-US/docs/Web/API/EventListener
+                
 
 */
 function gradeQuestion(evt) {
-  // The object that triggered the event i.e. the button
-  let clickedButton = evt.target;
+    // The object that triggered the event i.e. the button
+    let clickedButton = evt.target;
 
-  // The word on the button, which is encoded in data-word (see generateAnswerButton above)
-  let buttonWord = clickedButton.dataset.word;
-  let correctAnswer = clickedButton.dataset.correctAnswer;
+    // The word on the button, which is encoded in data-word (see generateAnswerButton above)
+    let buttonWord = clickedButton.dataset.word;
+    let correctAnswer = clickedButton.dataset.correctAnswer;
 
-  if (buttonWord === correctAnswer) {
-    alert("Correct!");
-  } else {
-    alert("Please try again.");
-  }
+    if (buttonWord === correctAnswer) {
+        alert("Well done! / Bien Hecho! Now try the next question.");
+        score++;
+    } else {
+        alert("Unlucky, try again.");
+    }
 }
 
 
-function checkAnswer() {
 
+
+document.getElementById("score").addEventListener("click", totalScore);
+
+function totalScore() {
+alert("Congratulations, you got " + score + "/" + questions.length);
 }
-
-
-function addScore() {
-    let oldScore = parseInt(document.getElementById("q-correct").innerText);
-    document.getElementById("q-correct").innerText = ++oldScore;
-}
-
-
-function getPlayerScore() {
-
-}
-
-

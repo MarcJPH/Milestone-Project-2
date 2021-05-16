@@ -179,6 +179,10 @@ footer h5 {
   font-weight: bold;
 }
 
+.images {
+    margin: 100px 100px 100px 100px;
+}
+
 button {
   display: inline-block;
   padding: 0.5rem 1.5rem;
@@ -205,3 +209,11 @@ button {
     color: blue;
     text-decoration: none;
 }
+
+.check-total {
+    margin: 50px 0 50px 0;
+    }
+
+#score {
+    margin-right: 100px;
+}    
