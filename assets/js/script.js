@@ -25,16 +25,6 @@ $(".submit").click(function() {
 });
 
 
-//function feedbackForm(data) {
-    //if (data.status === 200) {
-        //alert("Thank you! You should receive an email shortly. Please remember to check your Junk/Spam folder!");
-    //} else {
-        //alert("There was an error submitting the form, please try again.")
-    //}
-//}
-
-
-
 
 
 //An array of questions that will be loaded onto the game_page.html
