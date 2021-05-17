@@ -137,14 +137,10 @@ footer h5 {
 }
 
 .back-home {
-    color: blue;
+    color: black;
     font-size: 2.5rem;
 }
 
-#question-number{
-    text-align: center;
-    padding-top: 50px;
-}
 
 #image {
     text-align: center;
@@ -176,7 +172,7 @@ footer h5 {
 
 .question-text {
   margin: 5px;
-  font-size: 1.17rem;
+  font-size: 1.60rem;
   font-weight: bold;
 }
 
@@ -206,6 +202,11 @@ button {
 .select:active:focus {
     color: blue;
     text-decoration: none;
+}
+
+.email:hover {
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .check-total {

@@ -16,16 +16,21 @@ function sendMail(contactForm) {
             }
         );
     return false; // To block from loading a new page
-}
-
-
-function playerName() {
 
 }
 
-function playerAge() {
+$(".submit").click(function() {
+    $("#contactmodal").modal('hide');
+});
 
-}
+
+//function feedbackForm(data) {
+    //if (data.status === 200) {
+        //alert("Thank you! You should receive an email shortly. Please remember to check your Junk/Spam folder!");
+    //} else {
+        //alert("There was an error submitting the form, please try again.")
+    //}
+//}
 
 
 
@@ -125,13 +130,13 @@ for (let question of questions) {
     questionDiv.appendChild(questionText);
 
     //Add the image for the questions.
-    //let images = document.getElementsByClassName("question-container");
+    let images = document.getElementsByClassName("question-container");
     //images.addEventListener('mouseover', imageIn);
     //document.getElementsById("question-text").addEventListener('mouseout', imageOut);
 
 
-    //function imageIn(evt) {
-      
+    //function imageIn(event) {
+    //console.log('You moved the mouse over the div!\n');
     //}
 
     // Show the choices. Each choice is a button that has the choice as its text
@@ -202,5 +207,5 @@ function gradeQuestion(evt) {
 document.getElementById("score").addEventListener("click", totalScore);
 
 function totalScore() {
-alert("Congratulations, you got " + score + "/" + questions.length);
+    alert("Congratulations/Felicidades, you got " + score + "/" + questions.length);
 }

@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
         integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_0hXyp92VnxTRHitZksULN");
+        })();
+    </script>
     <title>Learn the Lingo | Learning Spanish for Children</title>
 </head>
 
@@ -21,12 +27,12 @@
     </header>
 
     <div class="home"><a href="index.html"><i class="fas fa-home back-home"></i></a></div>
-   
+
     <!------Questions------>
     <section>
         <div id="buttons"></div>
         <div class="d-flex justify-content-end check-total">
-        <button id="score" class="btn-primary btn-lg">Check Your Score</button> 
+            <button id="score" class="btn-primary btn-lg">Check Your Score</button>
         </div>
     </section>
 
@@ -36,7 +42,6 @@
     <footer class="container-fluid">
         <div class="footer-details row">
             <div class="col-sm-4 contact">
-                <!---<h5>Contact Us <i class="fas fa-envelope"></i></h5>---->
                 <a class="email" data-toggle="modal" data-target="#contactmodal">Contact Us <i
                         class="fas fa-envelope"></i></a>
             </div>
@@ -54,7 +59,40 @@
         </div>
     </footer>
 
-    
+
+    <!------Contact Modal------>
+    <div class="modal fade" tabindex="-1" id="contactmodal">
+        <div class="modal-dialog modal-dialog-centere">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Contact Us</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form onsubmit="return sendMail(this);">
+                        <div class="form-group">
+                            <label for="thename">Name</label>
+                            <input type="text" class="form-control" id="thename" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="emailinput">Email Address</label>
+                            <input type="email" class="form-control" id="emailinput" name="email"
+                                aria-describedby="emailHelp" placeholder="Senor@me.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="textarea">Please add your comments and feedback here</label>
+                            <textarea class="form-control" id="textarea" rows="4" name="comments" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
