@@ -131,9 +131,15 @@ footer h5 {
 }
 
 .home {
-    display: inline-block;
+    text-align: right;
+    margin-right: 150px;
+    padding-top: 30px;
 }
 
+.back-home {
+    color: blue;
+    font-size: 2.5rem;
+}
 
 #question-number{
     text-align: center;
@@ -142,11 +148,6 @@ footer h5 {
 
 #image {
     text-align: center;
-}
-
-#current-score {
-    text-align: center;
-    padding-top: 50px;
 }
 
 .score {
@@ -179,9 +180,6 @@ footer h5 {
   font-weight: bold;
 }
 
-.images {
-    margin: 100px 100px 100px 100px;
-}
 
 button {
   display: inline-block;

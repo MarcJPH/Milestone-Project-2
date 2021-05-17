@@ -1,4 +1,4 @@
-console.log("Script working?");
+
 //To send comments and feedback from the form in the Contact Us link
 //to email using EmailJS.
 function sendMail(contactForm) {
