@@ -21,6 +21,7 @@ function sendMail(contactForm) {
 
 $(".submit").click(function() {
     $("#contactmodal").modal('hide');
+    alert("Thank you for sending your feedback. All comments are welcomed as we strive to improve our game.")
 });
 
 
