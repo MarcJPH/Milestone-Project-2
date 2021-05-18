@@ -19,10 +19,13 @@ function sendMail(contactForm) {
 
 }
 
-$(".submit").click(function() {
-    $("#contactmodal").modal('hide');
-    alert("Thank you for sending your feedback. All comments are welcomed as we strive to improve our game.")
+$(function(){
+    $('#myFormSubmit').click(function(){
+      alert("Thank you for sending your feedback. All comments are welcomed as we strive to improve our game.")
+      $('#contactmodal').modal('hide')
+    });
 });
+
 
 
 
@@ -31,28 +34,24 @@ $(".submit").click(function() {
 
 const questions = [
     {
-        game_1: "Question 1",
         question: "1. How do you say hello in Spanish?",
         image: "assets/images/hello.jpg",
         choices: ["Adios", "Hola", "Bueno"],
         answer: "Hola"
     },
     {
-        game_2: "Question 2",
         question: "2. What does bicicleta mean in English?",
         image: "assets/images/bicycle.jpg",
         choices: ["Bicycle", "Bucket", "Balloon"],
         answer: "Bicycle"
     },
     {
-        game_3: "Question 3",
         question: "3. How do you say guitar in Spanish?",
         image: "assets/images/guitar.jpg",
         choices: ["Getafe", "Gorila", "Guitarra"],
         answer: "Guitarra"
     },
     {
-        game_3: "Question 4",
         question: "4. What does perro mean in English?",
         image: "assets/images/dog.jpg",
         choices: ["Dog", "Cat", "Parrot"],
@@ -60,42 +59,36 @@ const questions = [
     },
 
     {
-        game_3: "Question 5",
         question: "5. What does playa mean in English?",
         image: "assets/images/beach.jpg",
         choices: ["Plant", "Party", "Beach"],
         answer: "Beach"
     },
     {
-        game_3: "Question 6",
         question: "6. What is the colour red in Spanish?",
         image: 'tbc.jpg',
         choices: ["Blanco", "Rojo", "Lluvia"],
         answer: "Rojo"
     },
     {
-        game_3: "Question 7",
         question: "7. What is sun in Spanish?",
         image: 'tbc.jpg',
         choices: ["Sol", "Sello", "Bote"],
         answer: "Sol"
     },
     {
-        game_3: "Question 8",
         question: "8. What does flor mean in English?",
         image: 'tbc.jpg',
         choices: ["Flower", "Car", "Foot"],
         answer: "Flower"
     },
     {
-        game_3: "Question 9",
         question: "9. What is hat in Spanish?",
         image: 'tbc.jpg',
         choices: ["Sandalias", "Calcetines", "Sombrero"],
         answer: "Sombrero"
     },
     {
-        game_3: "Question 10",
         question: "10. What does amigo mean in English?",
         image: 'tbc.jpg',
         choices: ["Auntie", "Friend", "Apple"],
@@ -185,10 +178,20 @@ function gradeQuestion(evt) {
     let correctAnswer = clickedButton.dataset.correctAnswer;
 
     if (buttonWord === correctAnswer) {
-        alert("Well done! / Bien Hecho! Now try the next question.");
+        Swal.fire({
+            icon: "success",
+            title: "Well done! / Bien Hecho! Now try the next question.",
+            showConfirmButton: false,
+            timer: 1900
+        })
         score++;
     } else {
-        alert("Unlucky, try again.");
+        Swal.fire({
+            icon: "warning",
+            title: "Unlucky, try again.",
+            showConfirmButton: false,
+            timer: 1900
+        })
     }
 }
 
@@ -198,5 +201,8 @@ function gradeQuestion(evt) {
 document.getElementById("score").addEventListener("click", totalScore);
 
 function totalScore() {
-    alert("Congratulations/Felicidades, you got " + score + "/" + questions.length);
+    Swal.fire({
+        title: "Congratulations / Felicidades",
+        text: "You got " + score + "/" + questions.length,
+    })
 }
