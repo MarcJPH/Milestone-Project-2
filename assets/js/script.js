@@ -19,11 +19,9 @@ function sendMail(contactForm) {
 
 }
 
-$(function(){
-    $('#myFormSubmit').click(function(){
-      alert("Thank you for sending your feedback. All comments are welcomed as we strive to improve our game.")
-      $('#contactmodal').modal('hide')
-    });
+$(".submit").click(function () {
+    $("#contactmodal").modal('hide');
+    alert("Thank you for sending your feedback. All comments are welcomed as we strive to improve our game.")
 });
 
 
@@ -34,65 +32,95 @@ $(function(){
 
 const questions = [
     {
-        question: "1. How do you say hello in Spanish?",
+        question: "How do you say hello in Spanish?",
         image: "assets/images/hello.jpg",
         choices: ["Adios", "Hola", "Bueno"],
         answer: "Hola"
     },
     {
-        question: "2. What does bicicleta mean in English?",
+        question: "What does bicicleta mean in English?",
         image: "assets/images/bicycle.jpg",
         choices: ["Bicycle", "Bucket", "Balloon"],
         answer: "Bicycle"
     },
     {
-        question: "3. How do you say guitar in Spanish?",
+        question: "How do you say guitar in Spanish?",
         image: "assets/images/guitar.jpg",
         choices: ["Getafe", "Gorila", "Guitarra"],
         answer: "Guitarra"
     },
     {
-        question: "4. What does perro mean in English?",
+        question: "What does perro mean in English?",
         image: "assets/images/dog.jpg",
         choices: ["Dog", "Cat", "Parrot"],
         answer: "Dog"
     },
 
     {
-        question: "5. What does playa mean in English?",
+        question: "What does playa mean in English?",
         image: "assets/images/beach.jpg",
         choices: ["Plant", "Party", "Beach"],
         answer: "Beach"
     },
     {
-        question: "6. What is the colour red in Spanish?",
+        question: "What is the colour red in Spanish?",
         image: 'tbc.jpg',
         choices: ["Blanco", "Rojo", "Lluvia"],
         answer: "Rojo"
     },
     {
-        question: "7. What is sun in Spanish?",
+        question: "What is sun in Spanish?",
         image: 'tbc.jpg',
         choices: ["Sol", "Sello", "Bote"],
         answer: "Sol"
     },
     {
-        question: "8. What does flor mean in English?",
+        question: "What does flor mean in English?",
         image: 'tbc.jpg',
         choices: ["Flower", "Car", "Foot"],
         answer: "Flower"
     },
     {
-        question: "9. What is hat in Spanish?",
+        question: "What is hat in Spanish?",
         image: 'tbc.jpg',
         choices: ["Sandalias", "Calcetines", "Sombrero"],
         answer: "Sombrero"
     },
     {
-        question: "10. What does amigo mean in English?",
+        question: "What does amigo mean in English?",
         image: 'tbc.jpg',
         choices: ["Auntie", "Friend", "Apple"],
         answer: "Friend"
+    },
+    {
+        question: "What is dad in Spanish?",
+        image: 'tbc.jpg',
+        choices: ["Papa", "Mama", "Abuelo"],
+        answer: "Papa"
+    },
+    {
+        question: "What does el colegio mean in English?",
+        image: 'tbc.jpg',
+        choices: ["Car", "Cucumber", "School"],
+        answer: "School"
+    },
+    {
+        question: "What does el futbol mean in English?",
+        image: 'tbc.jpg',
+        choices: ["Farm", "Football", "Fun"],
+        answer: "Football"
+    },
+    {
+        question: "What is ice-cream in Spanish?",
+        image: 'tbc.jpg',
+        choices: ["El Elardo", "La Hamburguesa", "La Paella"],
+        answer: "El Elardo"
+    },
+    {
+        question: "What is yes in Spanish?",
+        image: 'tbc.jpg',
+        choices: ["Oui", "Pea", "Si"],
+        answer: "Si"
     }
 ];
 
@@ -101,8 +129,17 @@ let score = 0;
 const BUTTONS_CONTAINER = document.getElementById("buttons");
 
 // Loop through all the questions above and create a div with the question and
-// multiple choice buttons.
-for (let question of questions) {
+// multiple choice buttons for 10 random questions.
+   for(var index = questions.length - 1; index > 0; index--){
+   var rndIndex = Math.floor(Math.random() * (index + 1));
+   var questionsTemp = questions[rndIndex];
+   questions[rndIndex] = questions[index];
+   questions[index] = questionsTemp;
+}
+var getRandomQuestions = questions.slice(0, 10);
+console.log(getRandomQuestions);
+
+for (let question of getRandomQuestions) {
     let questionDiv = document.createElement("div");
     questionDiv.classList.add("question-container");
     questionDiv.dataset.image = question.image;
@@ -112,6 +149,8 @@ for (let question of questions) {
     questionText.classList.add('question-text')
     questionText.innerHTML = question.question;
     questionDiv.appendChild(questionText);
+
+ 
 
     //Add the image for the questions.
     let images = document.getElementsByClassName("question-container");
@@ -203,6 +242,6 @@ document.getElementById("score").addEventListener("click", totalScore);
 function totalScore() {
     Swal.fire({
         title: "Congratulations / Felicidades",
-        text: "You got " + score + "/" + questions.length,
+        text: "You got " + score + " / 10",
     })
 }
