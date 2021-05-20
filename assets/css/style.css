@@ -185,4 +185,18 @@ button {
 
 #score {
     margin-right: 100px;
-}  
+}
+
+
+@media(max-width: 540px) {
+    h3{
+        font-size: 0.95rem;
+    }
+}
+
+
+@media(max-width: 540px) {
+    .footer-details{
+        text-align: center;
+    }
+}

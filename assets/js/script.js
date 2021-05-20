@@ -127,11 +127,11 @@ const BUTTONS_CONTAINER = document.getElementById("buttons");
 
 // Loop through all the questions above and create a div with the question and
 // multiple choice buttons for 10 random questions.
-   for(var index = questions.length - 1; index > 0; index--){
-   var rndIndex = Math.floor(Math.random() * (index + 1));
-   var questionsTemp = questions[rndIndex];
-   questions[rndIndex] = questions[index];
-   questions[index] = questionsTemp;
+for (var index = questions.length - 1; index > 0; index--) {
+    var rndIndex = Math.floor(Math.random() * (index + 1));
+    var questionsTemp = questions[rndIndex];
+    questions[rndIndex] = questions[index];
+    questions[index] = questionsTemp;
 }
 var getRandomQuestions = questions.slice(0, 10);
 console.log(getRandomQuestions);
@@ -150,12 +150,12 @@ for (let question of getRandomQuestions) {
 
     //Add the image for the questions.
 
-     //var img = new Image();
-        //img.src = question.image;
-        //img.style.width = '200px';
-        //img.style.height = '200px';
-        
-        //document.getElementById('question-container').appendChild(img);
+    //var img = new Image();
+    //img.src = question.image;
+    //img.style.width = '200px';
+    //img.style.height = '200px';
+
+    //document.getElementById('question-container').appendChild(img);
 
     //let imageView = document.createElement("img");
     //imageView.classList.add("images");
@@ -228,6 +228,9 @@ function gradeQuestion(evt) {
             timer: 1900
         })
         score++;
+        $(".question-container").click(function () {
+            $(this).hide();
+        });
     } else {
         Swal.fire({
             icon: "warning",
@@ -237,6 +240,8 @@ function gradeQuestion(evt) {
         })
     }
 }
+
+
 
 //Gets the number of correct answers from gradeQuestion function above
 //and produces a message to user when button is clicked.
