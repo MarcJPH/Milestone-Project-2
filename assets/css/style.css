@@ -128,15 +128,6 @@ footer h5 {
     font-size: 2.5rem;
 }
 
-
-#image {
-    text-align: center;
-}
-
-.images {
-    display: block;
-}
-
 #askQuestion {
     text-align: center;
     padding-top: 50px;
@@ -194,9 +185,14 @@ button {
     }
 }
 
-
 @media(max-width: 540px) {
     .footer-details{
+        text-align: center;
+    }
+}
+
+@media(max-width: 540px) {
+    .check-total{
         text-align: center;
     }
 }
