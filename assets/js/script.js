@@ -1,4 +1,3 @@
-
 //To send comments and feedback from the form in the Contact Us link
 //to email using EmailJS.
 function sendMail(contactForm) {
@@ -16,16 +15,14 @@ function sendMail(contactForm) {
             }
         );
     return false; // To block from loading a new page
-
 }
+
+//Function to close the modal after submitting feedback and to provide alert to user.
 
 $(".submit").click(function () {
     $("#contactmodal").modal('hide');
     alert("Thank you for sending your feedback. All comments are welcomed as we strive to improve our game.")
 });
-
-
-
 
 
 //An array of questions that will be loaded onto the game_page.html
@@ -144,16 +141,27 @@ for (let question of getRandomQuestions) {
     questionDiv.classList.add("question-container");
     questionDiv.dataset.image = question.image;
 
-    // Add the question text.
+    //Source the question text from the array
+    //and add it to the question div.
     let questionText = document.createElement("p");
-    questionText.classList.add('question-text')
+    questionText.classList.add("question-text");
     questionText.innerHTML = question.question;
     questionDiv.appendChild(questionText);
 
- 
-
     //Add the image for the questions.
-    let images = document.getElementsByClassName("question-container");
+
+     //var img = new Image();
+        //img.src = question.image;
+        //img.style.width = '200px';
+        //img.style.height = '200px';
+        
+        //document.getElementById('question-container').appendChild(img);
+
+    //let imageView = document.createElement("img");
+    //imageView.classList.add("images");
+    //imageView.innerHTML = (src = question.image);
+    //questionDiv.appendChild(imageView);
+
     //images.addEventListener('mouseover', imageIn);
     //document.getElementsById("question-text").addEventListener('mouseout', imageOut);
 
@@ -162,7 +170,7 @@ for (let question of getRandomQuestions) {
     //console.log('You moved the mouse over the div!\n');
     //}
 
-    // Show the choices. Each choice is a button that has the choice as its text
+    // Show the multiple choice answers. Each choice is a button that has the choice as its text
     // but also a data property with the actual answer, to be used in grading below.
     // The grading function is triggered when the button is clicked.
     for (let choice of question.choices) {
@@ -176,11 +184,8 @@ for (let question of getRandomQuestions) {
 }
 
 /* Given a word in Spanish, generate button that displays that word.
-
 The button also has a data attribute with the same word.
-
 @param {string} spanishWord - The Spanish word to display on the button.
-
 @returns {HTMLElement} - The button object described above.
 */
 function generateAnswerButton(spanishWordOnButton, answer) {
@@ -193,7 +198,7 @@ function generateAnswerButton(spanishWordOnButton, answer) {
 
     button.dataset.word = spanishWordOnButton;
 
-    // Add an attribute with the correct answer for this question, to make grading easy.
+    // Add an attribute with the correct answer for this question.
     button.dataset.correctAnswer = answer;
 
     // Make the button trigger the grading function below when clicked.
@@ -202,14 +207,13 @@ function generateAnswerButton(spanishWordOnButton, answer) {
     return button;
 }
 
-/* Event listener for answer buttons. Decide whether the answer chosen is correct or not.
-
-@param {Event} - The fired event. This is standard for all event listeners.
-                
-
+/* Event listener for answer buttons. Validate whether the answer chosen is correct or not.
+and display a message to the user.
+@param {Event} - The fired event.
 */
+
 function gradeQuestion(evt) {
-    // The object that triggered the event i.e. the button
+    // The object that triggered the event.
     let clickedButton = evt.target;
 
     // The word on the button, which is encoded in data-word (see generateAnswerButton above)
@@ -234,8 +238,8 @@ function gradeQuestion(evt) {
     }
 }
 
-
-
+//Gets the number of correct answers from gradeQuestion function above
+//and produces a message to user when button is clicked.
 
 document.getElementById("score").addEventListener("click", totalScore);
 
