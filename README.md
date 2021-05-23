@@ -73,6 +73,7 @@ Features left to implement:
  - The addition of sounds to bring more life to the game.
  - A leaderboard to store the players score and allow them to compare to others.
  - The correct answer in the alert message when player selects the wrong answer.
+ - A notification of the questions and the correct answers once player has finished the quiz.
 
 
 #### Technologies Used

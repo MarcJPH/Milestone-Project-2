@@ -18,7 +18,6 @@ function sendMail(contactForm) {
 }
 
 //Function to close the modal after submitting feedback and to provide alert to user.
-
 $(".submit").click(function () {
     $("#contactmodal").modal('hide');
     alert("Thank you for sending your feedback. All comments are welcomed as we strive to improve our game.");
