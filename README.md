@@ -1,6 +1,6 @@
 # Learn the Lingo Web based game
 
-#### A link to the site can be found [here.]()
+#### A link to the site can be found [here.](https://marcjph.github.io/Milestone-Project-2/)
 
 #### Interactive Front End Development - Code Institute
 
@@ -49,13 +49,13 @@ Parents:
 
 
 
-#### Wireframes
+### Wireframes
 
  - [Index Page](wireframes/index_page.png)
  - [Game Page](wireframes/game_page.png)
  - [Instructions Modal](wireframes/instructions_modal.png)
 
-#### Features
+### Features
 
 Existing features:
 
@@ -72,9 +72,10 @@ Features left to implement:
  - The use of images to bring more visuals for the player. These would be available for each question and be a guide to the player what the answer may be.
  - The addition of sounds to bring more life to the game.
  - A leaderboard to store the players score and allow them to compare to others.
+ - The correct answer in the alert message when player selects the wrong answer.
 
 
-### Technologies Used
+#### Technologies Used
 
 * HTML5
 * CSS
@@ -92,11 +93,11 @@ Features left to implement:
 * [SweetAlert2](https://sweetalert2.github.io/)
     * SweetAlert2 is used to provide a more engaging alert message.
 
-#### Testing
+### Testing
 
 The following testing was performed to test functionality, browser compatibility, responsiveness and that the user stories documented above are fulfilled by the completed site.
 
-### Functionality
+#### Functionality
 
 Test | Action | Expected Outcome | Test Outcome |
 ---- | ------ | ---------------- | ------------ |
@@ -109,6 +110,8 @@ Home icon | Select the home icon on the game_page.html page. | User is taken to 
 Multiple choice answer buttons | Select one of answer option buttons below the respective question. | A notification will appear advising if answer selected was correct. The answered question should then dissapear from view. | PASS
 Check Your Score button | Select the Check Your Score button on the game_page.html page. | A notification would appear advising of the players score. | PASS
 Hovering over links and buttons | Hover over links and buttons on both html pages. | When hovering over these elements, they should change colour or change visually. | PASS
+Random list of questions on Play Button | Select the Play Game button on the Index.html page. | When selecting the button numerous times, a different list of 10 questions is produced. | PASS
+
 
 #### Browser Capability
 

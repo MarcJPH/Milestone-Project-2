@@ -105,6 +105,26 @@ const questions = [
         question: "What is yes in Spanish?",
         choices: ["Oui", "Pea", "Si"],
         answer: "Si"
+    },
+     {
+        question: "How do you say please in Spanish?",
+        choices: ["Por Favor", "Privado", "Prohibida"],
+        answer: "Por Favor"
+    },
+     {
+        question: "What is night in Spanish?",
+        choices: ["La Noveno", "La Noche", "El Tiempo"],
+        answer: "La Noche"
+    },
+    {
+        question: "What is 2 in Spanish?",
+        choices: ["Uno", "Movil", "Dos"],
+        answer: "Dos"
+    },
+    {
+        question: "What is cheese in Spanish?",
+        choices: ["El Queso", "Las Abejas", "El Mar"],
+        answer: "El Queso"
     }
 ];
 
