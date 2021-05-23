@@ -29,7 +29,6 @@ $(".submit").click(function () {
 
 
 //An array of questions that will be loaded onto the game_page.html
-
 const questions = [
     {
         question: "How do you say hello in Spanish?",
@@ -134,7 +133,6 @@ for (let question of getRandomQuestions) {
     questionText.innerHTML = question.question;
     questionDiv.appendChild(questionText);
 
-
     // Show the multiple choice answers. Each choice is a button that has the choice as its text
     // but also a data property with the actual answer, to be used in grading below.
     // The grading function is triggered when the button is clicked.
@@ -214,11 +212,11 @@ function gradeQuestion(evt) {
 //Gets the number of correct answers from gradeQuestion function above
 //and produces a message to user when button is clicked.
 
-document.getElementById("score").addEventListener("click", totalScore);
-
 function totalScore() {
     Swal.fire({
         title: "Congratulations / Felicidades",
         text: "You got " + score + " / 10",
     });
 }
+
+document.getElementById("score").addEventListener("click", totalScore);
