@@ -64,6 +64,14 @@ footer h5 {
     text-align: center;
 }
 
+.socialnetwork {
+    padding-right: 50px; 
+}
+
+.list-inline {
+    padding-left: 150px;
+}
+
 .socials {
     color: red;
     font-size: 1.5rem;
@@ -192,6 +200,21 @@ button {
 @media(max-width: 540px) {
     .footer-details{
         text-align: center;
+    }
+}
+
+@media(max-width: 540px) {
+    .contact {
+    padding-left: 0px;
+    }
+}
+
+@media(max-width: 540px) {
+    .list-inline {
+    padding-left: 0px;
+    }
+    .socialnetwork {
+    padding-right: 0;
     }
 }
 
