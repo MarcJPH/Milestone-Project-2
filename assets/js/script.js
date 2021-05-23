@@ -21,7 +21,7 @@ function sendMail(contactForm) {
 
 $(".submit").click(function () {
     $("#contactmodal").modal('hide');
-    alert("Thank you for sending your feedback. All comments are welcomed as we strive to improve our game.")
+    alert("Thank you for sending your feedback. All comments are welcomed as we strive to improve our game.");
 });
 
 
@@ -189,7 +189,7 @@ function gradeQuestion(evt) {
             title: "Well done! / Bien Hecho! Now try the next question.",
             showConfirmButton: false,
             timer: 1900
-        })
+        });
         score++;
     } else {
         Swal.fire({
@@ -198,15 +198,12 @@ function gradeQuestion(evt) {
             inputValue: correctAnswer,
             showConfirmButton: false,
             timer: 1900
-        })
+        });
     }
     $(".question-container").click(function(){
            $(this).hide(); 
         });
 }
-
-
-
 
 
 //Gets the number of correct answers from gradeQuestion function above
@@ -218,5 +215,5 @@ function totalScore() {
     Swal.fire({
         title: "Congratulations / Felicidades",
         text: "You got " + score + " / 10",
-    })
+    });
 }
