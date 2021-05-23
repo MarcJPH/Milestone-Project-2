@@ -185,13 +185,14 @@ function gradeQuestion(evt) {
     let buttonWord = clickedButton.dataset.word;
     let correctAnswer = clickedButton.dataset.correctAnswer;
 
-
+    //Check if selected answer is correct.
+    //Provide alert if correct or not.
     if (buttonWord === correctAnswer) {
         Swal.fire({
             icon: "success",
             title: "Well done! / Bien Hecho! Now try the next question.",
             showConfirmButton: false,
-            timer: 1900
+            timer: 3000
         });
         score++;
     } else {
@@ -200,9 +201,10 @@ function gradeQuestion(evt) {
             title: "Unlucky, better luck next time.",
             inputValue: correctAnswer,
             showConfirmButton: false,
-            timer: 1900
+            timer: 3000
         });
     }
+    //When answer is selected, remove question and answers.
     $(".question-container").click(function () {
         $(this).hide();
     });
