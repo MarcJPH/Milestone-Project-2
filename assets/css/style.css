@@ -19,37 +19,11 @@ body {
 }
 
 
-
 /*----------------Paddings/Margins/Text----------*/
 
 .heading {
     padding-top: 25px;
     padding-bottom: 20px;
-}
-
-.intro {
-    margin: 30px 80px 30px 80px;
-    text-align: center;
-}
-
-.instructions {
-    margin: 30px 0 30px 0;
-}
-
-.play{
-    padding-top: 15px;
-}
-
-.btn-red {
-    background-color: red;
-    border-color: red;
-    font-weight: bold;
-    color: white;
-}
-
-
-.buttons {
-    margin: 50px 0 50px 0;
 }
 
 footer h5 {
@@ -107,6 +81,33 @@ footer h5 {
     text-decoration: none;
 }
 
+
+/*----------------Index----------*/
+
+.intro {
+    margin: 30px 80px 30px 80px;
+    text-align: center;
+}
+
+.instructions {
+    margin: 30px 0 30px 0;
+}
+
+.play{
+    padding-top: 15px;
+}
+
+.btn-red {
+    background-color: red;
+    border-color: red;
+    font-weight: bold;
+    color: white;
+}
+
+.buttons {
+    margin: 50px 0 50px 0;
+}
+
 .modal-content {
     background-color: red;
     color: yellow;
@@ -116,6 +117,9 @@ footer h5 {
     background-color: yellow;
     color: red;
 }
+
+
+/*----------------Game_Page----------*/
 
 .home {
     text-align: right;
@@ -138,7 +142,6 @@ footer h5 {
     text-align: center;
 }
 
-
 .question-container {
   margin: 30px 10px 10px 10px;
 }
@@ -148,7 +151,6 @@ footer h5 {
   font-size: 1.60rem;
   font-weight: bold;
 }
-
 
 button {
   display: inline-block;
@@ -178,6 +180,8 @@ button {
     margin-right: 100px;
 }
 
+
+/*----------------Media Query----------*/
 
 @media(max-width: 540px) {
     h3{

@@ -195,6 +195,7 @@ function gradeQuestion(evt) {
         Swal.fire({
             icon: "warning",
             title: "Unlucky, better luck next time.",
+            inputValue: correctAnswer,
             showConfirmButton: false,
             timer: 1900
         })
