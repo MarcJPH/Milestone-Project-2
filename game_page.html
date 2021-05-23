@@ -10,7 +10,7 @@
         integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.7/dist/sweetalert2.css">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script type="text/javascript">
         (function () {
             emailjs.init("user_0hXyp92VnxTRHitZksULN");
@@ -26,9 +26,14 @@
         </h2>
     </header>
 
+    <!-----Home Button
+        Link for use to get back to the home page.----->
     <div class="home"><a href="index.html"><i class="fas fa-home back-home"></i></a></div>
 
-    <!------Questions------>
+
+    <!-----Questions
+        Buttons div where elements used for playing the game are created via the JS code.
+        Score button where users can find out what their score was out of 10.----->
     <section>
         <div id="buttons"></div>
         <div class="d-flex justify-content-end check-total">
@@ -36,6 +41,9 @@
         </div>
     </section>
 
+    <!-----Footer
+        Contact link creates modal popup with form to provide feedback.
+        Two links to the games Twitter and Instagram pages.----->
     <footer class="container-fluid">
         <div class="footer-details row">
             <div class="col-sm-4 contact">
@@ -47,10 +55,10 @@
             </div>
             <div class="col-sm-4 socialnetwork">
                 <ul class="list-inline">
-                    <li class="list-inline-item"><a href="https://www.twitter.com" target="_blank" class="socials"><i
-                                class="fab fa-twitter-square"></i> @LearnTheLingo</a></li>
-                    <li class="list-inline-item"><a href="https://www.instagram.com" target="_blank" class="socials"><i
-                                class="fab fa-instagram"></i> LearnTheLingo</a></li>
+                    <li class="list-inline-item"><a href="https://www.twitter.com" target="_blank" rel="noopener"
+                            class="socials"><i class="fab fa-twitter-square"></i> @LearnTheLingo</a></li>
+                    <li class="list-inline-item"><a href="https://www.instagram.com" target="_blank" rel="noopener"
+                            class="socials"><i class="fab fa-instagram"></i> LearnTheLingo</a></li>
                 </ul>
             </div>
         </div>
@@ -97,9 +105,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
         integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
         crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.7/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.7/dist/sweetalert2.all.min.js"></script>
     <script src="assets/js/script.js"></script>
-    
+
 </body>
 
 </html>
